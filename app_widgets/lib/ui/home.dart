@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -54,7 +53,17 @@ class Home extends StatelessWidget {
             ),
           ),),
         ],),
+        PizzaImageWidget(),
       ],)
     ));
+  }
+}
+
+class PizzaImageWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage pizzaAssert = AssetImage('images/clip-art-pizza-1.jpg');
+    Image image = Image(image: pizzaAssert, width: 400.0, height: 400.0,);
+    return Container(child: image,);
   }
 }
